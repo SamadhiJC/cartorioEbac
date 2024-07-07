@@ -1,6 +1,6 @@
-#include <stdio.h> //biblioteca de comunicação com o usuario
-#include <stdlib.h> //biblioteca d alocação de espaço em memória
-#include <locale.h> //biblioteca d alocações d texto po região
+#include <stdio.h> //biblioteca de comunicaÃ§Ã£o com o usuario
+#include <stdlib.h> //biblioteca d alocaÃ§Ã£o de espaÃ§o em memÃ³ria
+#include <locale.h> //biblioteca d alocaÃ§Ãµes d texto po regiÃ£o
 #include <string.h>//biblioteca responsavel por cuidar da string
 
 int registro()
@@ -73,12 +73,12 @@ int registro()
 		if(file==NULL)
 	
 	{
-		printf("não foi possivel abrir o arquivo, não localizado!.\n");
+		printf("nÃ£o foi possivel abrir o arquivo, nÃ£o localizado!.\n");
 	}
 	
 	while(fgets(conteudo, 200, file)!=NULL)
 	{
-		printf("\nEssas são as informações do usuario: ");
+		printf("\nEssas sÃ£o as informaÃ§Ãµes do usuario: ");
 		printf("%s",conteudo);
 		printf("\n\n");
 	}
@@ -89,13 +89,13 @@ int registro()
 
 int deletar()
 {
-	printf("você escolheu deletar nomes!\n");
+	printf("vocÃª escolheu deletar nomes!\n");
 	system("pause");
 }
 
 int main()
 {
-	int opcao=0; //definindo variáveis
+	int opcao=0; //definindo variÃ¡veis
 	int laco=1;
 	
 	for(laco=1;laco=1;)
@@ -105,14 +105,15 @@ int main()
 	
 	setlocale(LC_ALL, "portuguese"); //definindo a linguagem
 	
-	printf("### cartório da EBAC ###\n\n"); //inicio do menu
-	printf("Escolha a opção desejada do menu:\n\n");
+	printf("### cartÃ³rio da EBAC ###\n\n"); //inicio do menu
+	printf("Escolha a opÃ§Ã£o desejada do menu:\n\n");
 	printf("\t1 - Registrar nomes\n");
 	printf("\t2 - consultar nomes\n");
 	printf("\t3 - Deletar nomes\n\n");
-	printf("opção: ");//fim do menu
+	printf("\t4 - sair do sistema\n\n");
+	printf("opÃ§Ã£o: ");//fim do menu
 	
-	scanf("%d" , &opcao); //armazenando a escolha do usuário
+	scanf("%d" , &opcao); //armazenando a escolha do usuÃ¡rio
 	
 	system("cls");
 
@@ -121,22 +122,27 @@ int main()
 		{
 	
 		case 1:
-		printf("você escolheu o registo de nomes!\n");
+		printf("vocÃª escolheu o registo de nomes!\n");
 		system("pause");
 		break;
 		
 		case 2:
-		printf("você escolheu consultar os nomes!\n");
+		printf("vocÃª escolheu consultar os nomes!\n");
 		system("pause");
 		break;
 		
 		case 3:
-		printf("você escolheu deletar nomes!\n");
+		printf("vocÃª escolheu deletar nomes!\n");
 		system("pause");
+		break;
+
+		case 4:
+		printf("obrigado por utilizar o sistema!\n");
+		return 0;
 		break;
 		
 		default:
-		printf("essa opção não está disponivel!\n");
+		printf("essa opÃ§Ã£o nÃ£o estÃ¡ disponivel!\n");
 		system("pause");
 		break;
 		}	
